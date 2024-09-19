@@ -1,33 +1,34 @@
-action = input("Do you like action? (yes/no): ")
-comedy = input("Do you like comedy? (yes/no): ") 
-sci_fi = input("Do you like sci_fi? (yes/no): ") 
+
+action = input("Do you like action? (yes/no): ") == "yes"
+comedy = input("Do you like comedy? (yes/no): ") == "yes"
+sci_fi = input("Do you like sci_fi? (yes/no): ") == "yes"
 
 if action and comedy and not sci_fi:
-    genre = "Action-Comedy"
+    genre = "action-comedy"
 elif action and sci_fi and not comedy:
-    genre = "Action-Scy_Fi"
+    genre = "action-sci_fi"
 elif comedy and sci_fi and not action:
-    genre = "Comedy-Sci_fi"
+    genre = "comedy-sci_fi"
 elif action:
-    genre = "Action"
+    genre = "action"
 elif comedy:
-    genre = "Comedy"
+    genre = "comedy"
 elif sci_fi:
-    genre = "Sci_Fi"
+    genre = "sci_fi"
 else:
     genre = "Unknown"
 
-    if genre == "Action-Comedy":
+if genre == "action-comedy":
         print("Recommended Movies: Rush Hour, Bad Boys, The Nice Guy")
-    elif genre == "Action-Sci_Fi":
+elif genre == "action-sci_fi":
         print("Recommened Movies: The Martian, Interstellar")
-    elif genre == "Comedy-Sci_Fi":
+elif genre == "comedy-sci_fi":
         print("Recommended Movies: Guardians Of The Galaxy")
-    elif genre == "Action":
+elif genre == "action":
         print("Recommened Movies: Die Hard, Ride Along")
-    elif genre == "Comedy":
+elif genre == "comedy":
         print("Recommened Movies: Central Intelligence, Dealpool")
-    elif genre == "Sci_Fi":
+elif genre == "sci_fi":
         print("Recommened Movies: Aliens, Avengers")
-    else:
+else:
         print("Sorry, we dont know what you like")
