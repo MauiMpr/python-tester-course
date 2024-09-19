@@ -10,7 +10,7 @@ print("4. Calculate string length")
 print("5. Loop through characters")
 
 
-choice = int(input(1))
+choice = int(input("Enter a number"))
 
 
 if choice == 1:
